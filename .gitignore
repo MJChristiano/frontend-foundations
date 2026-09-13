@@ -1,0 +1,9 @@
+# Dependencies & Environment Variables
+.env
+*.env
+__pycache__/
+*.pyc
+
+# Editor & System Files
+.DS_Store
+Thumbs.db

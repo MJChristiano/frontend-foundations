@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <title>Weather API Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">WeatherApp</div>
+        <button id="themeToggle" class="theme-btn">☀️ Light Mode</button>
+        <a href="index.html" class="project-link">&larr; Back to Portfolio</a>
+    </nav>
+
+    <div class="content">
+        <h1>Real-Time Weather Integration</h1>
+        <p>Fetches live climate data from the Open-Meteo API using asynchronous JavaScript.</p>
+
+        <!-- Search Location Form -->
+        <div class="contact-section full-width-section app-card-narrow">
+            <form id="weatherSearchForm" class="search-form-container">
+                <div class="form-group form-group-grow">
+                    <label for="cityInput">Search City or ZIP Code</label>
+                    <input type="text" id="cityInput" placeholder="e.g., New York, 90210, London, Tokyo..." class="search-input" required>
+                </div>
+                <button type="submit" class="theme-btn search-submit-btn">Search Weather</button>
+            </form>
+        </div>
+
+        <div class="weather-card">
+            <h2 id="cityName">Fetching Data...</h2>
+            <p id="temperature">-- &deg;F</p>
+            <p id="condition">Connecting to public API network...</p>
+            <iframe
+                id="weatherMap"
+                class="weather-map"
+                title="Map of the weather location"
+                loading="lazy">
+            </iframe>
+        </div>
+        
+        <div class="contact-section app-card-narrow">
+            <h2 class="section-title">How It Works</h2>
+            <p class="text-muted">This page demonstrates real-time API integration by fetching current weather conditions based on your geographic location. The application uses:</p>
+            <ul class="list-spaced">
+                <li>Geolocation API to detect user coordinates</li>
+                <li>Open-Meteo API for weather data</li>
+                <li>Async/await for clean asynchronous code</li>
+                <li>Dynamic DOM updates for instant feedback</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Weather API integration script -->
+    <script src="weather.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

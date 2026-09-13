@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="stylesheet" href="style.css">
+    <title>E-Commerce Analytics Dashboard</title>
+</head>
+<body>
+
+ <!-- Shared Navigation Bar -->
+    <nav class="navbar">
+        <div class="logo">AnalyticsDash</div>
+        <button id="themeToggle" class="theme-btn">☀️ Light Mode</button>
+        <ul class="nav-links">
+            <!-- UPDATED TARGET LINK BELOW -->
+            <li><a href="index.html">Back to Portfolio</a></li>
+        </ul>
+    </nav>   
+
+    <!-- Main Dashboard Analytics View -->
+    <div class="projects-section">
+        <h2>E-Commerce Sales Analytics</h2>
+        <p class="contact-subtitle subtitle-bottom-space">Real-time store metrics, transaction data logs, and comprehensive performance analytics for your business.</p>
+
+        <!-- KPI Grid Summary Cards -->
+        <div class="kpi-container">
+            <div class="kpi-card">
+                <div class="kpi-label">Total Revenue</div>
+                <div class="kpi-value">$24,520.80</div>
+                <p class="kpi-subtext">+14% vs last month</p>
+            </div>
+            <div class="kpi-card">
+                <div class="kpi-label">Conversion Rate</div>
+                <div class="kpi-value">3.42%</div>
+                <p class="kpi-subtext">of total visitors</p>
+            </div>
+            <div class="kpi-card">
+                <div class="kpi-label">Active Sessions</div>
+                <div class="kpi-value">1,240</div>
+                <p class="kpi-subtext">concurrent users now</p>
+            </div>
+        </div>
+
+        <!-- Recent Transactions Panel -->
+        <div class="transaction-table">
+            <h3>Recent Transactions</h3>
+            <p class="section-desc-space">Live sales tracking entries executed via checkout gateway API integrations.</p>
+
+            <!-- Status Filter Buttons -->
+            <div class="filter-btn-group" id="transactionFilterGroup">
+                <button class="filter-btn active" data-filter="all">All Orders</button>
+                <button class="filter-btn" data-filter="Completed">Completed</button>
+                <button class="filter-btn" data-filter="Processing">Processing</button>
+            </div>
+
+            <!-- Add Order Form -->
+            <form id="addTransactionForm" class="add-transaction-form">
+                <input type="text" id="newCustomerInput" placeholder="Customer Name (e.g. John D.)" required>
+                <input type="number" step="0.01" id="newAmountInput" placeholder="Amount ($)" required>
+                <select id="newStatusInput" aria-label="Select Order Status">
+                    <option value="Completed">Completed</option>
+                    <option value="Processing">Processing</option>
+                </select>
+                <button type="submit" class="theme-btn btn-add-order">+ Add Order</button>
+            </form>
+            
+            <div class="transaction-grid" id="transactionGrid">
+                <div class="transaction-item" data-status="Completed">
+                    <strong>Order #4092</strong>
+                    <span>Customer: Alex M.</span>
+                    <span>Amount: $149.00</span>
+                    <span>Status: Completed</span>
+                </div>
+                <div class="transaction-item" data-status="Completed">
+                    <strong>Order #4091</strong>
+                    <span>Customer: Sarah K.</span>
+                    <span>Amount: $89.50</span>
+                    <span>Status: Completed</span>
+                </div>
+                <div class="transaction-item" data-status="Completed">
+                    <strong>Order #4090</strong>
+                    <span>Customer: James L.</span>
+                    <span>Amount: $210.00</span>
+                    <span>Status: Completed</span>
+                </div>
+                <div class="transaction-item" data-status="Completed">
+                    <strong>Order #4089</strong>
+                    <span>Customer: Maria G.</span>
+                    <span>Amount: $175.25</span>
+                    <span>Status: Completed</span>
+                </div>
+                <div class="transaction-item" data-status="Processing">
+                    <strong>Order #4088</strong>
+                    <span>Customer: David P.</span>
+                    <span>Amount: $320.00</span>
+                    <span>Status: Processing</span>
+                </div>
+                <div class="transaction-item" data-status="Completed">
+                    <strong>Order #4087</strong>
+                    <span>Customer: Emily R.</span>
+                    <span>Amount: $95.75</span>
+                    <span>Status: Completed</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Re-use the exact same script file to inherit theme toggling out of the box -->
+    <script src="script.js"></script>
+</body>
+</html>

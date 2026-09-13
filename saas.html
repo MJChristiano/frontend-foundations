@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="stylesheet" href="style.css">
+    <title>SaaS Product Landing Page</title>
+</head>
+<body>
+
+    <!-- Shared Navigation Bar -->
+    <nav class="navbar">
+        <div class="logo">SaaSify</div>
+        <button id="themeToggle" class="theme-btn">☀️ Light Mode</button>
+        <ul class="nav-links">
+            <li><a href="index.html">Back to Portfolio</a></li>
+        </ul>
+    </nav>  
+
+    <!-- VIEW 1: Main SaaS Pricing Grid (Visible by Default) -->
+    <div class="projects-section pricing-section" id="pricingSection">
+        <h2>Grow Your Business Faster</h2>
+        <p class="contact-subtitle pricing-subtitle">
+            The ultimate software platform designed to manage your cloud infrastructure, optimize team workflows, and scale automation layers.
+        </p>
+
+        <div class="projects-grid pricing-grid">
+            <!-- Free Tier -->
+            <div class="project-card">
+                <div class="project-badge">Starter</div>
+                <h3>$0 / mo</h3>
+                <p>Perfect for individual developers looking to explore core analytics and basic tools.</p>
+                <a href="#" class="project-link btn-center">Get Started &rarr;</a>
+            </div>
+            
+            <!-- Pro Tier (Highlighted) -->
+            <div class="project-card pricing-card-highlight">
+                <div class="project-badge badge-highlight">Popular</div>
+                <h3>$29 / mo</h3>
+                <p>Full team management access, unlimited dynamic API calls, and dedicated priority support channels.</p>
+                <a href="#" class="project-link btn-center">Go Pro &rarr;</a>
+            </div>
+
+            <!-- Enterprise Tier -->
+            <div class="project-card">
+                <div class="project-badge">Custom</div>
+                <h3>Contact Us</h3>
+                <p>Tailored security parameters, custom server gateways, and white-glove deployment services.</p>
+                <a href="#" class="project-link btn-center">Talk to Sales &rarr;</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- VIEW 2: Premium App Preview Dashboard (Hidden Initially via CSS display: none) -->
+    <div class="projects-section premium-dashboard" id="premiumDashboard">
+        
+        <!-- Interactive Checkout Banner at the Top -->
+        <div class="preview-banner">
+            <h3 class="preview-title">🔒 You are exploring the <span id="selectedPlanText" class="accent-text">Pro</span> Plan Preview</h3>
+            <p class="preview-desc">Unlock full write access, historical data exports, and live team collaboration features.</p>
+            <button id="finalizeCheckoutBtn" class="theme-btn checkout-btn">Upgrade & Finalize Checkout &rarr;</button>
+        </div>
+
+        <h2 class="heading-left">Cloud Infrastructure Manager</h2>
+        
+        <!-- App Grid Simulation -->
+        <div class="projects-grid">
+            <div class="project-card">
+                <div class="project-badge">Server Health</div>
+                <h3>99.98% Uptime</h3>
+                <p>All core API gateways, database clusters, and media delivery nodes operating optimally.</p>
+            </div>
+            <div class="project-card">
+                <div class="project-badge">Bandwidth</div>
+                <h3>4.2 TB / day</h3>
+                <p>Data payload transmissions optimized via global edge server caching protocols.</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

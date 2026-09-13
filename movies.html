@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="stylesheet" href="style.css">
+    <title>CineSearch &bull; Movie Database App</title>
+</head>
+<body>
+
+    <!-- Shared Navigation Bar -->
+    <nav class="navbar">
+        <div class="logo">CineSearch</div>
+        <button id="themeToggle" class="theme-btn">☀️ Light Mode</button>
+        <ul class="nav-links">
+            <li><a href="index.html">Back to Portfolio</a></li>
+        </ul>
+    </nav>  
+
+    <!-- Main Movie Application View -->
+    <div class="projects-section app-container">
+        <h2>Movie & Show Explorer</h2>
+        <p class="contact-subtitle">Search our local cinematic database for trending films, ratings, and runtimes.</p>
+
+        <!-- Search Control Bar -->
+        <div class="contact-section full-width-section">
+            <form id="movieSearchForm" class="search-form-container">
+                <div class="form-group form-group-grow">
+                    <label for="movieInput">Find a Movie</label>
+                    <input type="text" id="movieInput" placeholder="e.g., Matrix, Interstellar, Batman..." class="search-input" required>
+                </div>
+                <button type="submit" class="theme-btn search-submit-btn">Search</button>
+            </form>
+        </div>
+
+        <!-- Dynamic Movie Results Grid -->
+        <div class="projects-grid grid-top-space" id="movieResultsGrid">
+            <div class="project-card">
+                <div class="project-badge">Ready to Search</div>
+                <h3>Find a title</h3>
+                <p>Search for a movie above to load its details from OMDb.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Script connection pulls themes and interactivity -->
+    <script src="script.js"></script>
+</body>
+</html>

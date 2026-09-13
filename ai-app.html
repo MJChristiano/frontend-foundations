@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="stylesheet" href="style.css">
+    <title>AI & Automation Dashboard</title>
+</head>
+<body>
+
+    <!-- Shared Navigation Bar -->
+    <nav class="navbar">
+        <div class="logo">NeuralCore</div>
+        <button id="themeToggle" class="theme-btn">☀️ Light Mode</button>
+        <ul class="nav-links">
+            <li><a href="index.html">Back to Portfolio</a></li>
+        </ul>
+    </nav>  
+
+    <!-- Main AI Panel Showcase View -->
+    <div class="projects-section app-container">
+        <h2>Dynamic AI Orchestrator</h2>
+        <p class="contact-subtitle">Simulate real-time prompt parsing, token generation, and multi-agent pipeline routing.</p>
+
+        <!-- Dynamic Agent Integration Hub (Your Request!) -->
+        <h3 class="heading-cyan">Smart Suggestions: Connected Agents</h3>
+        <p class="subtitle-spaced">Select an active underlying engine model to process prompt queries.</p>
+        
+        <div class="projects-grid agent-grid">
+            <div class="project-card agent-card agent-card-active">
+                <strong class="agent-title">OpenAI ChatGPT</strong>
+                <span class="agent-subtitle-active">GPT-4o Model Active</span>
+            </div>
+            <div class="project-card agent-card">
+                <strong class="agent-title">Anthropic Claude</strong>
+                <span class="agent-subtitle">Claude 3.5 Sonnet</span>
+            </div>
+            <div class="project-card agent-card">
+                <strong class="agent-title">Google Gemini</strong>
+                <span class="agent-subtitle">Gemini 1.5 Pro</span>
+            </div>
+            <div class="project-card agent-card">
+                <strong class="agent-title">xAI Grok</strong>
+                <span class="agent-subtitle">Grok 2 Real-Time</span>
+            </div>
+        </div>
+
+        <!-- AI Interface Terminal Input Box -->
+        <div class="contact-section terminal-section">
+            <h3 class="terminal-heading">AI Interface Terminal</h3>
+            <form id="aiPromptForm">
+                <div class="form-group">
+                    <label for="personaSelect">Select AI Persona Mode</label>
+                    <select id="personaSelect" class="persona-select">
+                        <option value="general">🤖 General AI Assistant (Default)</option>
+                        <option value="tutor">💻 Expert Coding Tutor</option>
+                        <option value="writer">✍️ Creative Writer</option>
+                        <option value="sarcastic">😏 Witty & Sarcastic Guide</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="promptInput">Input Prompt Query</label>
+                    <textarea id="promptInput" rows="3" placeholder="Ask the neural array to analyze code, compile data templates, or run scripts..." class="terminal-textarea" required></textarea>
+                </div>
+                <button type="submit" class="contact-submit-btn terminal-submit-btn">Execute Query &rarr;</button>
+            </form>
+
+            <!-- AI Response Box with Copy Button -->
+            <div id="aiResponseWrapper" class="ai-response-wrapper">
+                <p id="aiResponseText" class="ai-response-text" aria-live="polite"></p>
+                <button id="copyAiBtn" class="copy-btn">📋 Copy Response</button>
+            </div>
+
+            <!-- Prompt History List -->
+            <div class="ai-history-container">
+                <div class="ai-history-header">
+                    <h4>Recent Queries</h4>
+                    <button id="clearHistoryBtn" class="clear-history-btn">Clear History</button>
+                </div>
+                <ul id="aiHistoryList" class="ai-history-list">
+                    <li class="ai-history-item ai-history-empty">No query history saved yet.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Script connection pulls persistent theme toggling -->
+    <script src="script.js?v=2"></script>
+</body>
+</html>
