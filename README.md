@@ -41,8 +41,9 @@ This repository showcases six core frontend applications:
    - Right-click `index.html` and select **Open with Live Server**.
 
 2. **Start the Python API Backend** (Required for Movie Search):
-   - Open your terminal in the project directory and run:
+   - Get a TMDB API key from [TMDB](https://www.themoviedb.org/settings/api), then set it in the same PowerShell terminal where you will start the server:
      ```bash
+     $env:TMDB_API_KEY="your_tmdb_key"
      python server.py
      ```
    - The backend server will run on `http://127.0.0.1:8000`.

@@ -83,7 +83,7 @@ class MovieAppHandler(SimpleHTTPRequestHandler):
             return super().do_GET()
 
         movie_title = parse_qs(request_url.query).get("title", [""])[0].strip()
-        api_key = os.environ.get("TMDB_API_KEY", "d20c83ad431b2f184af053d199703030")
+        api_key = os.environ.get("TMDB_API_KEY")
 
         if not api_key:
             return self.send_json({"error": "The TMDB API key has not been configured."}, 500)
